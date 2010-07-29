@@ -1,0 +1,22 @@
+* text=auto !eol
+/.classpath -text
+/.project -text
+.settings/.jsdtscope -text
+.settings/org.eclipse.wst.common.component -text
+.settings/org.eclipse.wst.common.project.facet.core.xml -text
+.settings/org.eclipse.wst.jsdt.ui.superType.container -text svneol=unset#application/octet-stream
+.settings/org.eclipse.wst.jsdt.ui.superType.name -text svneol=unset#application/octet-stream
+WebContent/META-INF/MANIFEST.MF -text
+WebContent/WEB-INF/lib/LokiTagLib.jar -text
+WebContent/WEB-INF/lib/LuceneTagLib.jar -text
+WebContent/WEB-INF/lib/NIHFOATagLib.jar -text
+WebContent/WEB-INF/lib/jstl.jar -text
+WebContent/WEB-INF/lib/lucene-analyzers-2.2.0.jar -text
+WebContent/WEB-INF/lib/lucene-core-2.2.0.jar -text
+WebContent/WEB-INF/lib/standard.jar -text
+WebContent/WEB-INF/web.xml -text
+WebContent/footer.jsp -text
+WebContent/header.jsp -text
+WebContent/regenerate.jsp -text
+WebContent/search.jsp -text
+WebContent/similarity.jsp -text
