@@ -2,6 +2,7 @@
 /.classpath -text
 /.project -text
 .settings/.jsdtscope -text
+.settings/org.eclipse.jdt.core.prefs -text
 .settings/org.eclipse.wst.common.component -text
 .settings/org.eclipse.wst.common.project.facet.core.xml -text
 .settings/org.eclipse.wst.jsdt.ui.superType.container -text svneol=unset#application/octet-stream
