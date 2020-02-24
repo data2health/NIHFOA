@@ -50,20 +50,24 @@
 		</c:choose>
 		<h3>Search Results:</h3>
 		<p>search request: <c:out value="${param.query}" /></p>
-		<table>
+		<table border=1 align=left>
 			<tr>
 				<th>Solicitation</th>
 				<th>Title</th>
 				<th>Score</th>
 			</tr>
-			<lucene:search lucenePath="/Users/eichmann/NIH_FOA_Index" queryString="${param.query}" label="${mode}">
-				<c:set var="id"><lucene:hit label="id" /></c:set>
-				<tr><nihfoa:guideDoc ID="${id}">
-					<td><nihfoa:guideDocDocNum/></td>
-					<td><a href="<nihfoa:guideDocGuideLink/>"><nihfoa:guideDocTitle/></a></td>
-					<td><lucene:hit label="score" /></td>
-				</nihfoa:guideDoc></tr>
-			</lucene:search>
+			<lucene:search lucenePath="/Users/eichmann/NIH_FOA_Index" queryParserName="boolean" queryString="${param.query}" label="${mode}">
+					<lucene:searchIterator>
+						<c:set var="id"><lucene:hit label="id" /></c:set>
+						<tr>
+							<nihfoa:guideDoc ID="${id}">
+								<td><nihfoa:guideDocDocNum /></td>
+								<td><a href="<nihfoa:guideDocGuideLink/>"><nihfoa:guideDocTitle /></a></td>
+								<td><lucene:hit label="score" /></td>
+							</nihfoa:guideDoc>
+						</tr>
+					</lucene:searchIterator>
+				</lucene:search>
 		</table>
 	</c:when>
 	<c:otherwise>
