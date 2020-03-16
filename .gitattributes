@@ -14,6 +14,7 @@ WebContent/WEB-INF/web.xml -text
 WebContent/embedded_search.jsp -text
 WebContent/footer.jsp -text
 WebContent/header.jsp -text
+WebContent/images/data_circle.jpg -text
 WebContent/regenerate.jsp -text
 WebContent/search.jsp -text
 WebContent/similarity.jsp -text
