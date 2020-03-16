@@ -2,6 +2,8 @@
 <%@ taglib prefix="lucene" uri="http://icts.uiowa.edu/lucene"%>
 <%@ taglib prefix="nihfoa" uri="http://icts.uiowa.edu/nihfoa"%>
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 <style type="text/css" media="all">
 body {
     font-size: 84%;
@@ -14,25 +16,20 @@ body {
 
 a {
     text-decoration: none;
-}
-a:link {
     color: #005a8c;
-    text-decoration: none;
 }
 
-ul, .block ul, ol {
-    margin: 0.5em 0 1em;
-    padding: 0 0 0 1.5em;
+a:visited{
+	color:#032e45
 }
 
-ul, ul li.leaf {
-    list-style-image: url(https://test.cd2h.org/themes/danland/images/menu-leaf.png);
+a:hover{
+	text-decoration: underline;
+	color:#3a7ec2;
 }
 
-.item-list ul li, li.leaf {
-    margin: 0.15em 0 0.15em .5em;
-    padding-bottom: .1em;
-}
+
+
 </style>
 
 <c:choose>
@@ -43,13 +40,27 @@ ul, ul li.leaf {
 		<c:set var="mode" value="${param.mode}" />
 	</c:otherwise>
 </c:choose>
-<ul>
+<div>
 	<lucene:search lucenePath="/Users/eichmann/NIH_FOA_Index" queryParserName="boolean" queryString="${param.query}" label="${mode}">
 		<lucene:searchIterator>
 			<c:set var="id"><lucene:hit label="id" /></c:set>
 			<nihfoa:guideDoc ID="${id}">
-				<li><a target="_parent" href="<nihfoa:guideDocGuideLink/>"><nihfoa:guideDocDocNum /></a>: <nihfoa:guideDocTitle /></li>
+				<div class="card mb-3" style="max-width: 540px;">
+					<div class="row no-gutters" style="font-family: Roboto, sans-serif; font-weight: 300;">
+					    <div class="col-3 text-center" style="background-image:url(images/data_circle.jpg);
+					    background-size:cover; vertical-align:middle;">
+					      <p style="margin-top:35%;color:white;font-size:2em;"><nihfoa:guideDocPrimaryIc /></p>
+					    </div>
+					    <div class="col-9">
+					      <div class="card-body">
+					        <h6 class="card-title" style="font-size:1.1em"><a target="_parent" href="<nihfoa:guideDocGuideLink/>"><nihfoa:guideDocDocNum /></a></h6>
+					        <p class="card-text" style="font-size:12PX;"><nihfoa:guideDocTitle /></p>	
+					      </div>
+					    </div>
+					  </div>
+					</div>
+<%-- 				<li><a target="_parent" href="<nihfoa:guideDocGuideLink/>"><nihfoa:guideDocDocNum /></a>: <nihfoa:guideDocTitle /></li> --%>
 			</nihfoa:guideDoc>
 		</lucene:searchIterator>
 	</lucene:search>
-</ul>
+</div>
