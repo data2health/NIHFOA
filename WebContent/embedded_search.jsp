@@ -64,11 +64,11 @@ a:hover{
 	</c:otherwise>
 </c:choose>
 <div>
-	<lucene:search lucenePath="/Users/grves/Desktop/NIH_FOA_Index" queryParserName="boolean" queryString="${param.query}" label="${mode}">
+	<lucene:search lucenePath="/Users/eichmann/NIH_FOA_Index" queryParserName="boolean" queryString="${param.query}" label="${mode}">
 		<lucene:searchIterator>
 			<c:set var="id"><lucene:hit label="id" /></c:set>
 			<nihfoa:guideDoc ID="${id}">
-				<div class="card mb-3" style="max-width: 540px;">
+				<div class="card mb-3">
 					<div class="row no-gutters" style="font-family: Roboto, sans-serif; font-weight: 300;">
 					    <div class="col-3" style="background-image:url(images/data_circle.jpg);
 					    background-size:cover;">
