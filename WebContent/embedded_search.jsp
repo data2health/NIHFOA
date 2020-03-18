@@ -28,6 +28,29 @@ a:hover{
 	color:#3a7ec2;
 }
 
+.ic_text{
+	color:white;
+	font-size:1.7em;
+	position:absolute;
+  	top: 0; 
+  	bottom: 0;
+  	right:0;
+  	left:0;
+  	margin: auto;
+  	text-align:center;
+  	height:fit-content;
+  	width:fit-content;
+}
+
+@media(max-width:320px){
+	.ic_text{
+		/* text-orientation: upright; */
+		writing-mode: vertical-rl;
+		/* letter-spacing: -5; */
+		letter-spacing: 3;
+		transform: rotate(180deg);
+	}
+}
 
 
 </style>
@@ -41,15 +64,15 @@ a:hover{
 	</c:otherwise>
 </c:choose>
 <div>
-	<lucene:search lucenePath="/Users/eichmann/NIH_FOA_Index" queryParserName="boolean" queryString="${param.query}" label="${mode}">
+	<lucene:search lucenePath="/Users/grves/Desktop/NIH_FOA_Index" queryParserName="boolean" queryString="${param.query}" label="${mode}">
 		<lucene:searchIterator>
 			<c:set var="id"><lucene:hit label="id" /></c:set>
 			<nihfoa:guideDoc ID="${id}">
 				<div class="card mb-3" style="max-width: 540px;">
 					<div class="row no-gutters" style="font-family: Roboto, sans-serif; font-weight: 300;">
-					    <div class="col-3 text-center" style="background-image:url(images/data_circle.jpg);
-					    background-size:cover; vertical-align:middle;">
-					      <p style="margin-top:35%;color:white;font-size:2em;"><nihfoa:guideDocPrimaryIc /></p>
+					    <div class="col-3" style="background-image:url(images/data_circle.jpg);
+					    background-size:cover;">
+					      <p class="ic_text"><nihfoa:guideDocPrimaryIc /></p>
 					    </div>
 					    <div class="col-9">
 					      <div class="card-body">
