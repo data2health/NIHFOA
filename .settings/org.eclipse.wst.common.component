@@ -6,16 +6,13 @@
         <dependent-module archiveName="LuceneTagLib-0.0.8-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LuceneTagLib/LuceneTagLib">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="NIHFOATagLib-0.0.5-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/NIHFOATagLib/NIHFOATagLib">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <dependent-module archiveName="RDFUtil-0.0.2-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/RDFUtil/RDFUtil">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="NLP-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/NLP/NLP">
+        <dependent-module archiveName="GraphTagLib-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/GraphTagLib/GraphTagLib">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="GraphTagLib-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/GraphTagLib/GraphTagLib">
+        <dependent-module archiveName="LokiTagLib-0.0.36-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/LokiTagLib_trunk/LokiTagLib_trunk">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="context-root" value="NIHFOA"/>
