@@ -12,6 +12,7 @@
 WebContent/META-INF/MANIFEST.MF -text
 WebContent/WEB-INF/web.xml -text
 WebContent/embedded_search.jsp -text
+WebContent/embedded_search_orig.jsp -text
 WebContent/footer.jsp -text
 WebContent/header.jsp -text
 WebContent/images/data_circle.jpg -text
