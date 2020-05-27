@@ -9,6 +9,9 @@
         <dependent-module archiveName="NLP-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/NLP/NLP">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="NIHFOATagLib-0.0.5-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/NIHFOATagLib/NIHFOATagLib">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <dependent-module archiveName="RDFUtil-0.0.2-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/RDFUtil/RDFUtil">
             <dependency-type>uses</dependency-type>
         </dependent-module>
